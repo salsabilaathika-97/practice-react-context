@@ -2,11 +2,11 @@ import React from "react";
 import CardImage from "../CardImage";
 import CardName from "../CardName";
 
-const Card = ({data}) => {
+const Card = () => {
     return (
         <div>
-            <CardName data = {data} />
-            <CardImage data = {data} />
+            <CardName />
+            <CardImage />
         </div>
     )
 }

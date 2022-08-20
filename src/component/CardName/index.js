@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardName = ({data}) => {
+const CardName = () => {
     return (
         <div>
             <h1>{data.name}</h1>

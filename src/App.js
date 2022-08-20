@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <mainContext.Provider value = {mainContextValue}>
-      <Card data={data}/>
+      <Card />
       </mainContext.Provider>
     </div>
   );

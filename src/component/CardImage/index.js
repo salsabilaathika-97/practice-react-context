@@ -1,6 +1,6 @@
 import React from "react";
 
-const CardImage = ({data}) => {
+const CardImage = () => {
     return (
         <div>
             <img src = {data.avatar} />
