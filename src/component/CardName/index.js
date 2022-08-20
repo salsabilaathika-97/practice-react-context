@@ -1,9 +1,9 @@
 import React from "react";
 
-const CardName = () => {
+const CardName = ({data}) => {
     return (
         <div>
-            <h1>Name</h1>
+            <h1>{data.name}</h1>
         </div>
     )
 }

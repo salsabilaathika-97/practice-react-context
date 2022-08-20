@@ -1,9 +1,9 @@
 import React from "react";
 
-const CardImage = () => {
+const CardImage = ({data}) => {
     return (
         <div>
-            <img src = "https://reqres.in/img/faces/7-image.jpg" />
+            <img src = {data.avatar} />
         </div>
     )
 }
