@@ -2,10 +2,10 @@ import React, {useContext} from "react";
 import { LayoutContext } from "../../context/LayoutContext";
 
 const Toggle = () => {
-    const {handleToggle} = useContext(LayoutContext);
+    const {handleToggle, nightmode} = useContext(LayoutContext);
     return (
         <div>
-            <button onClick={handleToggle}>On Night Mode</button>
+            <button onClick={handleToggle}>Change to {nightmode ? "Day" : "Night"} Mode</button>
         </div>
     )
 }
