@@ -1,11 +1,16 @@
 import React, {useContext} from "react";
+import { LayoutContext } from "../../context/LayoutContext";
 import { mainContext } from "../../context/mainContext";
 
 const CardName = () => {
     const context = useContext(mainContext);
+    const {nightmode, day, night} = useContext(LayoutContext);
+
+    const mood = nightmode ? night : day;
+
     return (
         <div>
-            <h1>{context.data.name}</h1>
+            <h1 style = {{ color: mood.color }}>{context.data.name}</h1>
         </div>
     )
 }

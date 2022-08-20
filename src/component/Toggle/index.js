@@ -1,9 +1,11 @@
-import React from "react";
+import React, {useContext} from "react";
+import { LayoutContext } from "../../context/LayoutContext";
 
 const Toggle = () => {
+    const {handleToggle} = useContext(LayoutContext);
     return (
         <div>
-            <button>On Night Mode</button>
+            <button onClick={handleToggle}>On Night Mode</button>
         </div>
     )
 }

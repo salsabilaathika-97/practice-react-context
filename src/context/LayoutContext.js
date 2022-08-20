@@ -1,5 +1,7 @@
 import React, {Component, createContext} from 'react';
 
+export const LayoutContext = createContext();
+
 class LayoutContextProvider extends Component {
     state = { 
         nightmode: false,
@@ -12,12 +14,18 @@ class LayoutContextProvider extends Component {
             background: '#000'
         },
      };
+
+    handleToggle = () => {
+        this.setState({
+            nightmode: !this.state.nightmode,
+        })
+    }
      
     render() { 
         return ( 
-            <LayoutContextProvider.Provider value = {{ ...this.state }}>
+            <LayoutContext.Provider value = {{ ...this.state, handleToggle: this.handleToggle }}>
                 {this.props.children}
-            </LayoutContextProvider.Provider>
+            </LayoutContext.Provider>
          );
     }
 }
