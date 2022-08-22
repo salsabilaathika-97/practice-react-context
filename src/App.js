@@ -3,6 +3,7 @@ import Card from './component/Card';
 import { useState } from "react";
 import { mainContext } from "./context/mainContext"
 import LayoutContextProvider from './context/LayoutContext';
+import { LayoutContextNewProvider } from './context/LayoutContextNew';
 
 function App() {
   const [data, setData] = useState({
@@ -16,11 +17,12 @@ function App() {
 
   return (
     <div className="App">
-      <LayoutContextProvider>
+      <LayoutContextNewProvider>
+      {/* <LayoutContextProvider> */}
         <mainContext.Provider value = {mainContextValue}>
           <Card />
         </mainContext.Provider>
-      </LayoutContextProvider>
+        </LayoutContextNewProvider>
     </div>
   );
 }
