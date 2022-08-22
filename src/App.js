@@ -1,21 +1,20 @@
 import './App.css';
 import Card from './component/Card';
-import { mainContext } from "./context/mainContext"
 import LayoutContextProvider from './context/LayoutContext';
 import { LayoutContextNewProvider } from './context/LayoutContextNew';
-import MainContextClassProvider, { MainContextClass } from './context/MainContextClass';
+import { MainContextProvider } from './context/MainContext';
+import MainContextClassProvider from './context/MainContextClass';
 
 function App() {
 
   return (
     <div className="App">
       <LayoutContextNewProvider>
-      {/* <LayoutContextProvider> */}
-        {/* <mainContext.Provider value = {mainContextValue}> */}
-        <MainContextClassProvider>
+        {/* <MainContextClassProvider> */}
+        <MainContextProvider>
           <Card />
-        </MainContextClassProvider>
-        {/* </mainContext.Provider> */}
+        {/* </MainContextClassProvider> */}
+        </MainContextProvider>
       </LayoutContextNewProvider>
     </div>
   );
